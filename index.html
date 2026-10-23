@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syross P. Algabre | Web Developer</title>
+<meta name="description" content="Portfolio of Syross P. Algabre, a web developer in Davao City building responsive front-end apps and Laravel APIs.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232F5BEA'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: { extend: {
+    fontFamily: {
+      display: ['"Bricolage Grotesque"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      sans: ['"DM Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+    },
+    colors: { ink: '#13202D', paper: '#EDF2F7', cobalt: '#2F5BEA', mint: '#17A589', sun: '#F5B83D' }
+  } }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #EDF2F7; color: #13202D; }
+  .dark body { background: #0E1620; color: #E6EDF5; }
+  .surface { background: #fff; border: 1px solid #D5DEE8; }
+  .dark .surface { background: #151F2C; border-color: #243244; }
+  .muted { color: #54657A; }
+  .dark .muted { color: #93A4B8; }
+  .grid-bg {
+    background-image: radial-gradient(#13202D22 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .dark .grid-bg { background-image: radial-gradient(#E6EDF522 1px, transparent 1px); }
+  .caret::after { content: ''; display: inline-block; width: 7px; height: 1em; background: #2F5BEA; margin-left: 2px; vertical-align: -2px; animation: blink 1s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .tl-line { background: linear-gradient(#2F5BEA, #17A58933); }
+  .chip { transition: transform .15s, background .15s; }
+  .chip:hover { transform: translateY(-2px); background: #2F5BEA; color: #fff; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #F5B83D; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body class="font-sans antialiased leading-relaxed">
+
+<header class="sticky top-0 z-40 backdrop-blur bg-paper/80 dark:bg-[#0E1620]/80 border-b border-black/5 dark:border-white/10">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between" aria-label="Main">
+    <a href="#top" class="flex items-center gap-2 font-display font-bold text-lg">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="#2F5BEA"/><path d="M9 22l5-5-5-5" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 23h8" stroke="#F5B83D" stroke-width="2.5" stroke-linecap="round"/></svg>
+      Syross Algabre
+    </a>
+    <div class="flex items-center gap-1 sm:gap-5 text-sm font-medium">
+      <a href="#about" class="hidden sm:inline hover:text-cobalt">About</a>
+      <a href="#experience" class="hidden sm:inline hover:text-cobalt">Experience</a>
+      <a href="#skills" class="hidden sm:inline hover:text-cobalt">Skills</a>
+      <a href="#contact" class="hidden sm:inline hover:text-cobalt">Contact</a>
+      <button id="theme" class="surface rounded-full w-10 h-10 grid place-items-center" aria-label="Toggle dark mode">
+        <svg id="ico-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+        <svg id="ico-sun" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="grid-bg absolute inset-0 opacity-60" aria-hidden="true"></div>
+    <div class="relative max-w-6xl mx-auto px-5 pt-16 pb-20 lg:pt-24 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="inline-flex items-center gap-2 surface rounded-full px-3 py-1 text-sm">
+          <span class="w-2 h-2 rounded-full bg-mint"></span> Available for remote work
+        </p>
+        <h1 class="font-display font-extrabold text-5xl sm:text-6xl leading-[1.02] mt-6 tracking-tight">
+          I build fast, tidy interfaces and the APIs behind them.
+        </h1>
+        <p class="muted text-lg mt-6 max-w-xl">
+          Hi, I'm Syross, a web developer in Davao City with more than ten years of experience. I turn designs into responsive Vue and React apps, and connect them to Laravel back ends that scale.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="#contact" class="bg-cobalt text-white font-semibold rounded-xl px-6 py-3 hover:brightness-110 transition">Contact me</a>
+          <a href="#experience" class="surface font-semibold rounded-xl px-6 py-3 hover:border-cobalt transition">See my experience</a>
+        </div>
+      </div>
+
+      <!-- Generated illustration: browser window, design / code toggle -->
+      <div class="relative">
+        <svg class="absolute -top-8 -right-6 w-40 h-40 text-sun" viewBox="0 0 160 160" aria-hidden="true"><circle cx="80" cy="80" r="70" fill="currentColor" opacity=".35"/></svg>
+        <svg class="absolute -bottom-8 -left-6 w-32 h-32 text-mint" viewBox="0 0 120 120" aria-hidden="true"><rect x="10" y="10" width="100" height="100" rx="28" fill="currentColor" opacity=".3" transform="rotate(14 60 60)"/></svg>
+        <div class="surface relative rounded-2xl shadow-2xl shadow-ink/10 overflow-hidden">
+          <div class="flex items-center gap-2 px-4 py-3 border-b border-black/10 dark:border-white/10">
+            <span class="w-3 h-3 rounded-full bg-[#FF6058]"></span><span class="w-3 h-3 rounded-full bg-sun"></span><span class="w-3 h-3 rounded-full bg-mint"></span>
+            <div class="ml-3 flex rounded-lg bg-black/5 dark:bg-white/10 p-1 text-sm font-medium" role="tablist">
+              <button role="tab" id="tab-ui" aria-selected="true" class="px-3 py-1 rounded-md bg-white dark:bg-[#243244] shadow-sm">Design</button>
+              <button role="tab" id="tab-code" aria-selected="false" class="px-3 py-1 rounded-md">Code</button>
+            </div>
+          </div>
+          <div id="pane-ui" class="p-6 min-h-[300px]">
+            <div class="flex items-center justify-between">
+              <div class="font-display font-bold text-xl">Dashboard</div>
+              <div class="w-9 h-9 rounded-full bg-cobalt grid place-items-center text-white text-sm font-bold">SA</div>
+            </div>
+            <div class="grid grid-cols-3 gap-3 mt-5">
+              <div class="rounded-xl bg-cobalt/10 p-3"><div class="text-xs muted">Load time</div><div class="font-display font-bold text-xl text-cobalt">0.8s</div></div>
+              <div class="rounded-xl bg-mint/10 p-3"><div class="text-xs muted">Mobile</div><div class="font-display font-bold text-xl text-mint">Ready</div></div>
+              <div class="rounded-xl bg-sun/20 p-3"><div class="text-xs muted">API</div><div class="font-display font-bold text-xl">REST</div></div>
+            </div>
+            <svg viewBox="0 0 300 90" class="w-full mt-5" aria-hidden="true">
+              <path d="M0 70 C40 60 60 20 100 38 S160 80 200 40 S260 10 300 22 V90 H0Z" fill="#2F5BEA" opacity=".15"/>
+              <path d="M0 70 C40 60 60 20 100 38 S160 80 200 40 S260 10 300 22" fill="none" stroke="#2F5BEA" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="flex gap-2 mt-4"><span class="h-8 w-24 rounded-lg bg-cobalt"></span><span class="h-8 w-20 rounded-lg bg-black/10 dark:bg-white/10"></span></div>
+          </div>
+          <pre id="pane-code" class="hidden p-6 min-h-[300px] text-[13px] leading-6 font-mono overflow-x-auto bg-[#0E1620] text-[#E6EDF5]"><code id="code-out" class="caret"></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-5 py-20 grid md:grid-cols-5 gap-10">
+    <h2 class="font-display font-bold text-3xl md:col-span-2">Clean code, shipped on time</h2>
+    <div class="md:col-span-3 space-y-5 text-lg">
+      <p>I'm a front-end developer who is comfortable across the full stack. I build modern, scalable web applications and APIs with PHP (Laravel), React, Vue, TypeScript, JavaScript and Tailwind CSS.</p>
+      <p class="muted">I translate business requirements into maintainable solutions, deliver production-ready interfaces, and connect them to robust RESTful back ends. I care about performance, code quality and cross-browser and mobile behavior, and I have worked with remote and startup teams to get products out the door.</p>
+      <div class="grid sm:grid-cols-3 gap-4 pt-2 text-base">
+        <div class="surface rounded-2xl p-4"><div class="font-display font-bold text-lg">Interfaces</div><p class="muted text-sm mt-1">Responsive, accessible UIs built from design files.</p></div>
+        <div class="surface rounded-2xl p-4"><div class="font-display font-bold text-lg">APIs</div><p class="muted text-sm mt-1">Laravel back ends and front-end integration.</p></div>
+        <div class="surface rounded-2xl p-4"><div class="font-display font-bold text-lg">Performance</div><p class="muted text-sm mt-1">Faster load times and smoother rendering.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="max-w-6xl mx-auto px-5 py-20">
+    <h2 class="font-display font-bold text-3xl">Where I've worked</h2>
+    <p class="muted mt-2">Newest first, from 2015 to today.</p>
+    <ol id="timeline" class="relative mt-12 ml-3 sm:ml-0"></ol>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-6xl mx-auto px-5 py-20">
+    <h2 class="font-display font-bold text-3xl">Tools I work with</h2>
+    <div id="skillGrid" class="grid md:grid-cols-3 gap-6 mt-10"></div>
+  </section>
+
+  <!-- Education -->
+  <section class="max-w-6xl mx-auto px-5 py-10">
+    <div class="surface rounded-3xl p-8 flex flex-col sm:flex-row sm:items-center gap-6">
+      <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true" class="shrink-0"><rect width="64" height="64" rx="18" fill="#17A589" opacity=".18"/><path d="M32 16L10 27l22 11 22-11z" fill="#17A589"/><path d="M18 34v10c0 4 6 8 14 8s14-4 14-8V34l-14 7z" fill="#17A589" opacity=".7"/></svg>
+      <div>
+        <h2 class="font-display font-bold text-2xl">Bachelor of Science in Information Technology</h2>
+        <p class="muted">Jose Maria College, Davao City, graduated 2015</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-5 py-20">
+    <div class="rounded-3xl bg-ink text-white p-8 sm:p-12 grid md:grid-cols-2 gap-10 relative overflow-hidden">
+      <svg class="absolute -right-10 -top-10 w-56 h-56 text-cobalt" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="currentColor" opacity=".35"/></svg>
+      <div class="relative">
+        <h2 class="font-display font-extrabold text-4xl leading-tight">Have a project in mind?</h2>
+        <p class="text-white/70 mt-4">Send a message and I'll reply by email. I work remotely and I'm based in Davao City, Philippines.</p>
+        <ul class="mt-8 space-y-3">
+          <li><a class="hover:text-sun" href="mailto:algbresyross123@gmail.com">algbresyross123@gmail.com</a></li>
+          <li><a class="hover:text-sun" href="tel:+639469479714">+63 946 947 9714</a></li>
+          <li><a class="hover:text-sun" href="Syross%20Pisao%20Algabre.pdf" target="_blank" rel="noopener noreferrer">View resume (PDF)</a></li>
+          <li class="text-white/70">Davao City, Davao Region 8000</li>
+        </ul>
+      </div>
+      <form id="form" class="relative space-y-4" novalidate>
+        <div><label for="name" class="text-sm text-white/80">Your name</label>
+          <input id="name" required class="mt-1 w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder-white/40" placeholder="Jane Cruz"></div>
+        <div><label for="msg" class="text-sm text-white/80">Message</label>
+          <textarea id="msg" required rows="4" class="mt-1 w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 text-white placeholder-white/40" placeholder="Tell me about your project"></textarea></div>
+        <p id="err" class="text-sm text-sun hidden" role="alert">Enter your name and a message to continue.</p>
+        <button class="bg-sun text-ink font-semibold rounded-xl px-6 py-3 hover:brightness-105 transition">Send email</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="max-w-6xl mx-auto px-5 pb-10 text-sm muted flex flex-wrap justify-between gap-2">
+  <span>&copy; <span id="yr"></span> Syross P. Algabre</span>
+  <div>GitHub: <a href="https://github.com/flappycodes" target="_blank" rel="noopener noreferrer">flappycodes</a></div>
+</footer>
+
+<script>
+const jobs = [
+  { role: 'Back-end Developer', org: 'Genius Giant Web Development & QA Services', place: 'Naga City, Bicol', when: 'Jan 2023 to Nov 2023', pts: ['Led the design and maintenance of the project, building a scalable and efficient back-end architecture.'] },
+  { role: 'Front-end Developer', org: 'ERANK LTD', place: 'Stow, Ohio, US (remote)', when: 'Mar 2018 to present', pts: ['Build user-friendly interfaces and work with UI/UX designers to implement designs accurately.', 'Create interactive features, optimized for cross-browser and mobile use.', 'Integrate front-end apps with back-end APIs and data services.', 'Improve load time and rendering efficiency.'] },
+  { role: 'Lead Developer', org: 'HighTask Services', place: 'Davao City', when: 'Sept 2017 to present', pts: ['Lead developer at a Davao-based startup, managing full-stack development and deployment.', 'Oversaw scalable systems and helped shape the product architecture.'] },
+  { role: 'Web Developer', org: 'Bywave', place: 'Davao City (Australian company)', when: 'Jan 2017 to Feb 2020', pts: ['Worked with remote teams on international web projects.', 'Maintained and optimized business websites and APIs.'] },
+  { role: 'Programmer', org: 'Enterprise Bank Inc.', place: 'Davao City', when: 'Apr 2016 to Jan 2017', pts: ['Developed internal tools and automation for loan processing and financial reporting.'] },
+  { role: 'Developer', org: 'Segworks Technologies Corporation', place: 'Davao City', when: 'Apr 2015 to Mar 2016', pts: ['Built custom software for local clients in the health and education sectors.'] }
+];
+const skills = {
+  'Front-end': ['Vue', 'React', 'TanStack', 'Pinia', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Sass', 'Tailwind', 'Vite', 'ESLint', 'Storybook', 'Axios'],
+  'Back-end and data': ['PHP (Laravel)', 'PHP (native)', 'SQL Server', 'SQLyog', 'Navicat'],
+  'Workflow': ['Git (CLI, extension, bash)', 'Sourcetree', 'Jira', 'Trello', 'Clubhouse', 'Linear']
+};
+
+const tl = document.getElementById('timeline');
+tl.innerHTML = '<span class="tl-line absolute left-[7px] top-2 bottom-2 w-0.5" aria-hidden="true"></span>' +
+  jobs.map(j => `
+  <li class="relative pl-10 pb-10 last:pb-0">
+    <span class="absolute left-0 top-2 w-4 h-4 rounded-full bg-cobalt ring-4 ring-paper dark:ring-[#0E1620]" aria-hidden="true"></span>
+    <div class="surface rounded-2xl p-6">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+        <h3 class="font-display font-bold text-xl">${j.role}</h3>
+        <span class="font-mono text-sm text-cobalt">${j.when}</span>
+      </div>
+      <p class="font-medium mt-1">${j.org}</p>
+      <p class="muted text-sm">${j.place}</p>
+      <ul class="mt-3 space-y-1.5 list-disc pl-5 marker:text-mint">${j.pts.map(p => `<li>${p}</li>`).join('')}</ul>
+    </div>
+  </li>`).join('');
+
+document.getElementById('skillGrid').innerHTML = Object.entries(skills).map(([k, v]) => `
+  <div class="surface rounded-2xl p-6 ${k === 'Front-end' ? 'md:col-span-3' : ''}">
+    <h3 class="font-display font-bold text-xl">${k}</h3>
+    <div class="flex flex-wrap gap-2 mt-4">${v.map(s => `<span class="chip cursor-default rounded-lg border border-cobalt/30 bg-cobalt/10 px-3 py-1.5 text-sm font-medium">${s}</span>`).join('')}</div>
+  </div>`).join('');
+
+// Theme
+const root = document.documentElement;
+function setTheme(d) {
+  root.classList.toggle('dark', d);
+  document.getElementById('ico-moon').classList.toggle('hidden', d);
+  document.getElementById('ico-sun').classList.toggle('hidden', !d);
+}
+let saved = null; try { saved = localStorage.getItem('theme'); } catch (e) {}
+setTheme(saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches);
+document.getElementById('theme').onclick = () => {
+  const d = !root.classList.contains('dark'); setTheme(d);
+  try { localStorage.setItem('theme', d ? 'dark' : 'light'); } catch (e) {}
+};
+
+// Hero design / code toggle with typing
+const code = `<script setup lang="ts">
+import { useQuery } from '@tanstack/vue-query'
+import { api } from './api'
+
+const { data, isLoading } = useQuery({
+  queryKey: ['stats'],
+  queryFn: () => api.get('/stats'),
+})
+<\/script>
+
+<template>
+  <Dashboard :stats="data" :loading="isLoading" />
+</template>`;
+const ui = document.getElementById('pane-ui'), pre = document.getElementById('pane-code'),
+      out = document.getElementById('code-out'), tUi = document.getElementById('tab-ui'), tCode = document.getElementById('tab-code');
+let timer;
+function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+function show(codeView) {
+  ui.classList.toggle('hidden', codeView); pre.classList.toggle('hidden', !codeView);
+  tUi.setAttribute('aria-selected', !codeView); tCode.setAttribute('aria-selected', codeView);
+  [tUi, tCode].forEach(b => {
+    const on = b.getAttribute('aria-selected') === 'true';
+    b.classList.toggle('bg-white', on); b.classList.toggle('dark:bg-[#243244]', on); b.classList.toggle('shadow-sm', on);
+  });
+  clearInterval(timer);
+  if (codeView) {
+    let i = 0; out.innerHTML = '';
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { out.innerHTML = esc(code); return; }
+    timer = setInterval(() => { i += 2; out.innerHTML = esc(code.slice(0, i)); if (i >= code.length) clearInterval(timer); }, 18);
+  }
+}
+tUi.onclick = () => show(false); tCode.onclick = () => show(true);
+
+// Contact form opens the visitor's email app
+document.getElementById('form').addEventListener('submit', e => {
+  e.preventDefault();
+  const n = document.getElementById('name').value.trim(), m = document.getElementById('msg').value.trim();
+  const err = document.getElementById('err');
+  if (!n || !m) { err.classList.remove('hidden'); return; }
+  err.classList.add('hidden');
+  location.href = 'mailto:algbresyross123@gmail.com?subject=' + encodeURIComponent('Portfolio message from ' + n) + '&body=' + encodeURIComponent(m);
+});
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
